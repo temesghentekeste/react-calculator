@@ -2,6 +2,10 @@
 
 A basic calculator developed using React.
 
+## 🔴 Live Demo
+
+**Click [here](https://react-calculator-temesghen.herokuapp.com/) in order to see a Live Demo of this project.**
+
 ## Project Specification
 
   - [ ] Use create-react-app to initialize a new React app
@@ -43,6 +47,6 @@ Feel free to check the [issues page](https://github.com/temesghentekeste/react-c
 Give a ⭐️ if you like this project!
 
 ## :clap: Acknowledgements
-- <a href="https://www.microverse.org/" target="_blank">microverse.org</a>
+- < href="https://www.microverse.org/" target="_blank">microverse.org</>
 - <a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a>
 </a>
