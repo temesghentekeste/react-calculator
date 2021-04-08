@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function ButtonPanel() {
   return (
@@ -8,4 +8,4 @@ function ButtonPanel() {
   );
 }
 
-export default ButtonPanel
+export default ButtonPanel;
