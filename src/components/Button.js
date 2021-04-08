@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Button({ name }) {
+  console.log(name);
   return (
     <div>
       <button type="button">{name}</button>
@@ -9,7 +10,7 @@ function Button({ name }) {
   );
 }
 
-Button.prototype = {
+Button.propTypes = {
   name: PropTypes.string.isRequired,
 };
 
