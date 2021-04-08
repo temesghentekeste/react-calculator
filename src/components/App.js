@@ -5,7 +5,7 @@ import '../App.css';
 
 const App = () => (
   <>
-    <Display result="0" />
+    <Display />
     <ButtonPanel />
   </>
 );

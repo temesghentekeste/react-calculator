@@ -9,6 +9,10 @@ function Display({ result }) {
   );
 }
 
+Display.defaultProp = {
+  result: '0',
+};
+
 Display.propTypes = {
   result: PropTypes.string.isRequired,
 };
