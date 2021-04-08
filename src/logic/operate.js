@@ -16,10 +16,13 @@ export default operate = (numberOne, numberTwo, operation) => {
       result = numberOne.times(numberTwo);
       break;
     case '/':
-      result = numberOne.div(numberTwo);
+      result = numberTwo !== 0 ? numberOne.div(numberTwo) : '∞';
       break;
     case '%':
-      result = numberOne.div(100);
+      result =
+        numberOne === null
+          ? numberTwo.div(100)
+          : numberOne.times(numberTwo).div(100);
       break;
     default:
       break;
