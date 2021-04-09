@@ -22,6 +22,7 @@ const calculate = (calculatorData, btnName) => {
       newCalculatorData.total = null;
       newCalculatorData.next = null;
       newCalculatorData.operation = null;
+      newCalculatorData.currentDisplay = '0';
       break;
 
     case '=':
