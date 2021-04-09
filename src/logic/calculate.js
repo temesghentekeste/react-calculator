@@ -34,6 +34,7 @@ const calculate = (calculatorData, btnName) => {
         );
         newCalculatorData.next = null;
         newCalculatorData.operation = null;
+        newCalculatorData.total = parseFloat(newCalculatorData.currentDisplay);
       }
       break;
 
