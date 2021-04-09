@@ -88,6 +88,26 @@ const calculate = (calculatorData, btnName) => {
       newCalculatorData.calculated = false;
       break;
 
+    case '.':
+      if (!calculatorData.operation && calculatorData.total) {
+        newCalculatorData.total = newCalculatorData.total.toString().includes('.')
+          ? `${newCalculatorData.total}`
+          : `${newCalculatorData.total}.`;
+        newCalculatorData.currentDisplay = `${newCalculatorData.total}`;
+        console.log(newCalculatorData);
+      }
+
+      if (calculatorData.total && calculatorData.operation) {
+        console.log('**************');
+        newCalculatorData.next = newCalculatorData.next.toString().includes('.')
+          ? newCalculatorData.next
+          : `${newCalculatorData.next}.`;
+        newCalculatorData.currentDisplay = newCalculatorData.next;
+        console.log(newCalculatorData);
+      }
+      newCalculatorData.calculated = false;
+      break;
+
     case operator:
       newCalculatorData.total = total || '0';
       newCalculatorData.operation = total ? operator : null;
