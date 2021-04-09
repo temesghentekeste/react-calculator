@@ -19,7 +19,7 @@ function ButtonPanel(props) {
       </div>
       <div>
         <Button name="4" {...props} />
-        <Button name="5" />
+        <Button name="5" {...props} />
         <Button name="6" {...props} />
         <Button name="-" {...props} />
       </div>

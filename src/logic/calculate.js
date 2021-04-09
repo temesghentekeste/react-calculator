@@ -4,7 +4,9 @@ const calculate = (calculatorData, btnName) => {
   const newCalculatorData = { ...calculatorData };
   const digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   const operators = ['+', '-', 'X', '÷', '%'];
-  const { total, next, operation } = calculatorData;
+  const {
+    total, next, operation, calculated,
+  } = calculatorData;
 
   let digit = null;
   let operator = null;
@@ -33,16 +35,16 @@ const calculate = (calculatorData, btnName) => {
             newCalculatorData.next,
             newCalculatorData.operation,
           );
-          newCalculatorData.next = null;
-          newCalculatorData.operation = null;
           newCalculatorData.total = parseFloat(
             newCalculatorData.currentDisplay,
           );
         } catch (error) {
+          newCalculatorData.currentDisplay = 'ERROR';
           newCalculatorData.total = null;
+        } finally {
           newCalculatorData.next = null;
           newCalculatorData.operation = null;
-          newCalculatorData.currentDisplay = 'ERROR';
+          newCalculatorData.calculated = true;
         }
       }
       break;
@@ -68,7 +70,7 @@ const calculate = (calculatorData, btnName) => {
 
     case digit:
       if (!calculatorData.operation) {
-        newCalculatorData.total = newCalculatorData.total
+        newCalculatorData.total = newCalculatorData.total && !calculated
           ? newCalculatorData.total + digit
           : digit;
         newCalculatorData.currentDisplay = newCalculatorData.total;
@@ -83,6 +85,7 @@ const calculate = (calculatorData, btnName) => {
         newCalculatorData.currentDisplay = newCalculatorData.next;
         console.log(newCalculatorData);
       }
+      newCalculatorData.calculated = false;
       break;
 
     case operator:

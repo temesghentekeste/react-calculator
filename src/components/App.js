@@ -15,6 +15,7 @@ class App extends React.Component {
       next: null,
       operation: null,
       currentDisplay: '0',
+      calculated: false,
     };
   }
 
