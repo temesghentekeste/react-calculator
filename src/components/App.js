@@ -14,24 +14,23 @@ class App extends React.Component {
       total: null,
       next: null,
       operation: null,
+      currentDisplay: '0',
     };
   }
 
   handleClick = (btnName) => {
-    const { total, next, operation } = calculate(this.state, btnName);
-    this.setState({
-      total,
-      next,
-      operation,
-    });
-    console.log('Clicked', btnName, this.state);
+    const currentOperation = calculate(this.state, btnName);
+    this.setState(currentOperation);
   };
 
   render() {
-    const { total, next, operation } = this.state;
+    console.log(this.state);
+    const {
+      total, next, operation, currentDisplay,
+    } = this.state;
     return (
       <>
-        <Display result={total} />
+        <Display result={currentDisplay} />
         <ButtonPanel clickHandler={this.handleClick} />
       </>
     );
