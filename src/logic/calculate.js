@@ -1,8 +1,17 @@
 import operate from './operate';
 
 const calculate = (calculatorData, btnName) => {
+  console.log(calculatorData, btnName);
   const newCalculatorData = { ...calculatorData };
+  const digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   const { total, next, operation } = calculatorData;
+
+  let digit = null;
+
+  if (digits.includes(btnName)) {
+    digit = btnName;
+  }
+
   switch (btnName) {
     case 'AC':
       newCalculatorData.total = null;
@@ -32,6 +41,14 @@ const calculate = (calculatorData, btnName) => {
     case '+/-':
       newCalculatorData.total *= -1;
       newCalculatorData.next *= -1;
+      break;
+
+    case digit:
+      if (!calculatorData.operation) {
+        newCalculatorData.total = newCalculatorData.total
+          ? newCalculatorData.total + digit
+          : digit;
+      }
       break;
 
     case calculatorData.operation:
