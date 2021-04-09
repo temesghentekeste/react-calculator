@@ -105,6 +105,9 @@ const calculate = (calculatorData, btnName) => {
 
       if (calculatorData.total && calculatorData.operation) {
         console.log('**************');
+        if (!newCalculatorData.next) {
+          newCalculatorData.next = 0;
+        }
         newCalculatorData.next = newCalculatorData.next.toString().includes('.')
           ? newCalculatorData.next
           : `${newCalculatorData.next}.`;
