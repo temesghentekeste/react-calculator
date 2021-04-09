@@ -38,9 +38,9 @@ const calculate = (calculatorData, btnName) => {
       break;
 
     case '%':
-      if (total && next && operation) {
+      if (total) {
         newCalculatorData.total /= 100;
-        newCalculatorData.operation = null;
+        newCalculatorData.currentDisplay = newCalculatorData.total.toString();
       }
       break;
 
