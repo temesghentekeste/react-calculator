@@ -1,38 +1,39 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import Button from './Button';
 
-function ButtonPanel() {
+function ButtonPanel(props) {
   return (
     <div>
       <div>
-        <Button name="AC" />
-        <Button name="+/-" />
-        <Button name="%" />
-        <Button name="÷" />
+        <Button name="AC" {...props} />
+        <Button name="+/-" {...props} />
+        <Button name="%" {...props} />
+        <Button name="÷" {...props} />
       </div>
       <div>
-        <Button name="7" />
-        <Button name="8" />
-        <Button name="9" />
-        <Button name="X" />
+        <Button name="7" {...props} />
+        <Button name="8" {...props} />
+        <Button name="9" {...props} />
+        <Button name="X" {...props} />
       </div>
       <div>
-        <Button name="4" />
+        <Button name="4" {...props} />
         <Button name="5" />
-        <Button name="6" />
-        <Button name="-" />
+        <Button name="6" {...props} />
+        <Button name="-" {...props} />
       </div>
       <div>
-        <Button name="1" />
-        <Button name="2" />
-        <Button name="3" />
-        <Button name="+" />
+        <Button name="1" {...props} />
+        <Button name="2" {...props} />
+        <Button name="3" {...props} />
+        <Button name="+" {...props} />
       </div>
 
       <div>
-        <Button name="0" />
-        <Button name="." />
-        <Button name="=" />
+        <Button name="0" {...props} />
+        <Button name="." {...props} />
+        <Button name="=" {...props} />
       </div>
     </div>
   );

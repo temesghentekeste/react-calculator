@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unused-state */
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import PropTypes from 'prop-types';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
 import '../App.css';
@@ -16,11 +17,15 @@ class App extends React.Component {
     };
   }
 
+  handleClick = (btnName) => {
+    console.log('Clicked', btnName);
+  };
+
   render() {
     return (
       <>
         <Display />
-        <ButtonPanel />
+        <ButtonPanel clickHandler={this.handleClick} />
       </>
     );
   }
