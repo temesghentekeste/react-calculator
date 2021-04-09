@@ -26,7 +26,7 @@ const calculate = (calculatorData, btnName) => {
 
     case '=':
       if (total && next && operation) {
-        newCalculatorData.total = operate(
+        newCalculatorData.currentDisplay = operate(
           newCalculatorData.total,
           newCalculatorData.next,
           newCalculatorData.operation,
@@ -54,6 +54,15 @@ const calculate = (calculatorData, btnName) => {
           ? newCalculatorData.total + digit
           : digit;
         newCalculatorData.currentDisplay = newCalculatorData.total;
+        console.log(newCalculatorData);
+      }
+
+      if (calculatorData.total && calculatorData.operation) {
+        console.log('**************');
+        newCalculatorData.next = newCalculatorData.next
+          ? newCalculatorData.next + digit
+          : digit;
+        newCalculatorData.currentDisplay = newCalculatorData.next;
         console.log(newCalculatorData);
       }
       break;

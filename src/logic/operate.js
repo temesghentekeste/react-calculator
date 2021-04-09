@@ -3,6 +3,7 @@
 import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
+  console.log(numberOne, numberTwo, operation);
   let result = null;
   numberOne = new Big(numberOne);
   numberTwo = new Big(numberTwo);
@@ -14,10 +15,10 @@ const operate = (numberOne, numberTwo, operation) => {
     case '-':
       result = numberOne.minus(numberTwo);
       break;
-    case '*':
+    case 'X':
       result = numberOne.times(numberTwo);
       break;
-    case '/':
+    case '÷':
       result = numberTwo !== 0 ? numberOne.div(numberTwo) : '∞';
       break;
     case '%':
