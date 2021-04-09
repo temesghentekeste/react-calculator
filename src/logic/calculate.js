@@ -27,14 +27,23 @@ const calculate = (calculatorData, btnName) => {
 
     case '=':
       if (total && next && operation) {
-        newCalculatorData.currentDisplay = operate(
-          newCalculatorData.total,
-          newCalculatorData.next,
-          newCalculatorData.operation,
-        );
-        newCalculatorData.next = null;
-        newCalculatorData.operation = null;
-        newCalculatorData.total = parseFloat(newCalculatorData.currentDisplay);
+        try {
+          newCalculatorData.currentDisplay = operate(
+            newCalculatorData.total,
+            newCalculatorData.next,
+            newCalculatorData.operation,
+          );
+          newCalculatorData.next = null;
+          newCalculatorData.operation = null;
+          newCalculatorData.total = parseFloat(
+            newCalculatorData.currentDisplay,
+          );
+        } catch (error) {
+          newCalculatorData.total = null;
+          newCalculatorData.next = null;
+          newCalculatorData.operation = null;
+          newCalculatorData.currentDisplay = 'ERROR';
+        }
       }
       break;
 
