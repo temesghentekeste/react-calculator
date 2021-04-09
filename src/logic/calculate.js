@@ -42,7 +42,7 @@ const calculate = (calculatorData, btnName) => {
           newCalculatorData.currentDisplay = 'ERROR';
           newCalculatorData.total = null;
         } finally {
-          newCalculatorData.next = null;
+          newCalculatorData.next = '0';
           newCalculatorData.operation = null;
           newCalculatorData.calculated = true;
         }
@@ -94,6 +94,12 @@ const calculate = (calculatorData, btnName) => {
           ? `${newCalculatorData.total}`
           : `${newCalculatorData.total}.`;
         newCalculatorData.currentDisplay = `${newCalculatorData.total}`;
+        console.log(newCalculatorData);
+      }
+
+      if (!calculatorData.operation && !calculatorData.total) {
+        newCalculatorData.total = '0.';
+        newCalculatorData.currentDisplay = newCalculatorData.total.toString();
         console.log(newCalculatorData);
       }
 
