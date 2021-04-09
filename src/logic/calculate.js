@@ -45,8 +45,15 @@ const calculate = (calculatorData, btnName) => {
       break;
 
     case '+/-':
-      newCalculatorData.total *= -1;
-      newCalculatorData.next *= -1;
+      if (newCalculatorData.total && !newCalculatorData.operation) {
+        newCalculatorData.total *= -1;
+        newCalculatorData.currentDisplay = newCalculatorData.total.toString();
+      }
+
+      if (newCalculatorData.total && newCalculatorData.operation) {
+        newCalculatorData.next *= -1;
+        newCalculatorData.currentDisplay = newCalculatorData.next.toString();
+      }
       break;
 
     case digit:
