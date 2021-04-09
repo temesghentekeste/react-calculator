@@ -1,6 +1,8 @@
+/* eslint-disable no-param-reassign */
+
 import Big from 'big.js';
 
-export default operate = (numberOne, numberTwo, operation) => {
+const operate = (numberOne, numberTwo, operation) => {
   let result = null;
   numberOne = new Big(numberOne);
   numberTwo = new Big(numberTwo);
@@ -19,10 +21,9 @@ export default operate = (numberOne, numberTwo, operation) => {
       result = numberTwo !== 0 ? numberOne.div(numberTwo) : '∞';
       break;
     case '%':
-      result =
-        numberOne === null
-          ? numberTwo.div(100)
-          : numberOne.times(numberTwo).div(100);
+      result = numberOne === null
+        ? numberTwo.div(100)
+        : numberOne.times(numberTwo).div(100);
       break;
     default:
       break;
@@ -30,3 +31,5 @@ export default operate = (numberOne, numberTwo, operation) => {
 
   return result;
 };
+
+export default operate;

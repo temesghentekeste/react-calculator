@@ -1,5 +1,6 @@
 import operate from './operate';
-export default calculate = (calculatorData, btnName) => {
+
+const calculate = (calculatorData, btnName) => {
   const newCalculatorData = { ...calculatorData };
   const { total, next, operation } = calculatorData;
   switch (btnName) {
@@ -14,7 +15,7 @@ export default calculate = (calculatorData, btnName) => {
         newCalculatorData.total = operate(
           newCalculatorData.total,
           newCalculatorData.next,
-          newCalculatorData.operation
+          newCalculatorData.operation,
         );
         newCalculatorData.next = null;
         newCalculatorData.operation = null;
@@ -23,7 +24,7 @@ export default calculate = (calculatorData, btnName) => {
 
     case '%':
       if (total && next && operation) {
-        newCalculatorData.total = newCalculatorData.total / 100;
+        newCalculatorData.total /= 100;
         newCalculatorData.operation = null;
       }
       break;
@@ -33,11 +34,11 @@ export default calculate = (calculatorData, btnName) => {
       newCalculatorData.next *= -1;
       break;
 
-    case data.operation:
+    case calculatorData.operation:
       newCalculatorData.total = operate(
         newCalculatorData.total,
         newCalculatorData.next,
-        newCalculatorData.operation
+        newCalculatorData.operation,
       );
       break;
 
@@ -47,3 +48,5 @@ export default calculate = (calculatorData, btnName) => {
 
   return newCalculatorData;
 };
+
+export default calculate;
