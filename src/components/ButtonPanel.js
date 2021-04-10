@@ -1,42 +1,26 @@
 /* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import Button from './Button';
 
 function ButtonPanel(props) {
-  return (
-    <div>
-      <div>
-        <Button name="AC" {...props} />
-        <Button name="+/-" {...props} />
-        <Button name="%" {...props} />
-        <Button name="÷" {...props} />
-      </div>
-      <div>
-        <Button name="7" {...props} />
-        <Button name="8" {...props} />
-        <Button name="9" {...props} />
-        <Button name="X" {...props} />
-      </div>
-      <div>
-        <Button name="4" {...props} />
-        <Button name="5" {...props} />
-        <Button name="6" {...props} />
-        <Button name="-" {...props} />
-      </div>
-      <div>
-        <Button name="1" {...props} />
-        <Button name="2" {...props} />
-        <Button name="3" {...props} />
-        <Button name="+" {...props} />
-      </div>
+  const btns = [
+    ['AC', '+/-', '%', '÷'],
+    ['7', '8', '9', 'X'],
+    ['4', '5', '6', '-'],
+    ['1', '2', '3', '+'],
+    ['0', '.', '='],
+  ];
 
-      <div>
-        <Button name="0" {...props} />
-        <Button name="." {...props} />
-        <Button name="=" {...props} />
-      </div>
+  const renderedBtns = btns.map((btnGroup, index) => (
+    <div key={index}>
+      { btnGroup.map((btn, index) => (
+        <Button key={index} {...props} name={btn} />
+      ))}
     </div>
-  );
+  ));
+
+  return <div>{renderedBtns}</div>;
 }
 
 export default ButtonPanel;
