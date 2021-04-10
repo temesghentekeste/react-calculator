@@ -1,7 +1,15 @@
 import operate from './operate';
 
+const resetCalculatorData = (data) => {
+  const resetedData = { ...data };
+  resetedData.total = null;
+  resetedData.next = null;
+  resetedData.operation = null;
+  return resetedData;
+};
+
 const calculate = (calculatorData, btnName) => {
-  const newCalculatorData = { ...calculatorData };
+  let newCalculatorData = { ...calculatorData };
   const digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   const operators = ['+', '-', 'X', '÷', '%'];
   const {
@@ -21,10 +29,9 @@ const calculate = (calculatorData, btnName) => {
 
   switch (btnName) {
     case 'AC':
-      newCalculatorData.total = null;
-      newCalculatorData.next = null;
-      newCalculatorData.operation = null;
+      newCalculatorData = resetCalculatorData(newCalculatorData);
       newCalculatorData.currentDisplay = '0';
+      console.log(newCalculatorData);
       break;
 
     case '=':
