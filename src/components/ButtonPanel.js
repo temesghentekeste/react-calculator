@@ -1,41 +1,26 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import Button from './Button';
 
-function ButtonPanel() {
-  return (
-    <div>
-      <div>
-        <Button name="AC" />
-        <Button name="+/-" />
-        <Button name="%" />
-        <Button name="÷" />
-      </div>
-      <div>
-        <Button name="7" />
-        <Button name="8" />
-        <Button name="9" />
-        <Button name="X" />
-      </div>
-      <div>
-        <Button name="4" />
-        <Button name="5" />
-        <Button name="6" />
-        <Button name="-" />
-      </div>
-      <div>
-        <Button name="1" />
-        <Button name="2" />
-        <Button name="3" />
-        <Button name="+" />
-      </div>
+function ButtonPanel(props) {
+  const btns = [
+    ['AC', '+/-', '%', '÷'],
+    ['7', '8', '9', 'X'],
+    ['4', '5', '6', '-'],
+    ['1', '2', '3', '+'],
+    ['0', '.', '='],
+  ];
 
-      <div>
-        <Button name="0" />
-        <Button name="." />
-        <Button name="=" />
-      </div>
+  const renderedBtns = btns.map((btnGroup, index) => (
+    <div key={index}>
+      { btnGroup.map((btn, index) => (
+        <Button key={index} {...props} name={btn} />
+      ))}
     </div>
-  );
+  ));
+
+  return <div>{renderedBtns}</div>;
 }
 
 export default ButtonPanel;

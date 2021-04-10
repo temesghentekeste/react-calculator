@@ -14,10 +14,10 @@ const operate = (numberOne, numberTwo, operation) => {
     case '-':
       result = numberOne.minus(numberTwo);
       break;
-    case '*':
+    case 'X':
       result = numberOne.times(numberTwo);
       break;
-    case '/':
+    case '÷':
       result = numberTwo !== 0 ? numberOne.div(numberTwo) : '∞';
       break;
     case '%':
@@ -29,7 +29,7 @@ const operate = (numberOne, numberTwo, operation) => {
       break;
   }
 
-  return result;
+  return result && result.toString();
 };
 
 export default operate;
