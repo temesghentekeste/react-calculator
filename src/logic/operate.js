@@ -18,7 +18,6 @@ const operate = (numberOne, numberTwo, operation) => {
       result = numberOne.times(numberTwo);
       break;
     case '÷':
-      console.log(numberOne, numberTwo, operation, '0000000');
       result = numberTwo !== 0 ? numberOne.div(numberTwo) : '∞';
       break;
     case '%':

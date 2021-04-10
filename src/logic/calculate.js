@@ -31,7 +31,6 @@ const calculate = (calculatorData, btnName) => {
     case 'AC':
       newCalculatorData = resetCalculatorData(newCalculatorData);
       newCalculatorData.currentDisplay = '0';
-      console.log(newCalculatorData);
       break;
 
     case '=':
@@ -81,16 +80,13 @@ const calculate = (calculatorData, btnName) => {
           ? newCalculatorData.total + digit
           : digit;
         newCalculatorData.currentDisplay = newCalculatorData.total;
-        console.log(newCalculatorData);
       }
 
       if (calculatorData.total && calculatorData.operation) {
-        console.log('**************');
         newCalculatorData.next = newCalculatorData.next
           ? newCalculatorData.next + digit
           : digit;
         newCalculatorData.currentDisplay = newCalculatorData.next;
-        console.log(newCalculatorData);
       }
       newCalculatorData.calculated = false;
       break;
@@ -101,17 +97,14 @@ const calculate = (calculatorData, btnName) => {
           ? `${newCalculatorData.total}`
           : `${newCalculatorData.total}.`;
         newCalculatorData.currentDisplay = `${newCalculatorData.total}`;
-        console.log(newCalculatorData);
       }
 
       if (!calculatorData.operation && calculatorData.total && calculated) {
         newCalculatorData.total = '0.';
         newCalculatorData.currentDisplay = newCalculatorData.total.toString();
-        console.log(newCalculatorData);
       }
 
       if (calculatorData.total && calculatorData.operation) {
-        console.log('**************');
         if (!newCalculatorData.next) {
           newCalculatorData.next = 0;
         }
@@ -119,7 +112,6 @@ const calculate = (calculatorData, btnName) => {
           ? newCalculatorData.next
           : `${newCalculatorData.next}.`;
         newCalculatorData.currentDisplay = newCalculatorData.next;
-        console.log(newCalculatorData);
       }
       newCalculatorData.calculated = false;
       break;

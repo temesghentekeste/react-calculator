@@ -25,9 +25,8 @@ class App extends React.Component {
   };
 
   render() {
-    console.log(this.state);
     const {
-      total, next, operation, currentDisplay,
+      currentDisplay,
     } = this.state;
     return (
       <>
