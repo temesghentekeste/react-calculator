@@ -125,10 +125,12 @@ const calculate = (calculatorData, btnName) => {
       break;
 
     case operator:
-      newCalculatorData.total = total || '0';
-      newCalculatorData.operation = total ? operator : null;
-      newCalculatorData.next = null;
-      newCalculatorData.currentDisplay = `${total} ${operator}`;
+      if (total) {
+        newCalculatorData.total = total || '0';
+        newCalculatorData.operation = total ? operator : null;
+        newCalculatorData.next = null;
+        newCalculatorData.currentDisplay = `${total} ${operator}`;
+      }
       break;
 
     default:
