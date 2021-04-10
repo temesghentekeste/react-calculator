@@ -96,7 +96,7 @@ const calculate = (calculatorData, btnName) => {
       break;
 
     case '.':
-      if (!calculatorData.operation && calculatorData.total) {
+      if (!calculatorData.operation && calculatorData.total && !calculated) {
         newCalculatorData.total = newCalculatorData.total.toString().includes('.')
           ? `${newCalculatorData.total}`
           : `${newCalculatorData.total}.`;
@@ -104,7 +104,7 @@ const calculate = (calculatorData, btnName) => {
         console.log(newCalculatorData);
       }
 
-      if (!calculatorData.operation && !calculatorData.total) {
+      if (!calculatorData.operation && calculatorData.total && calculated) {
         newCalculatorData.total = '0.';
         newCalculatorData.currentDisplay = newCalculatorData.total.toString();
         console.log(newCalculatorData);
