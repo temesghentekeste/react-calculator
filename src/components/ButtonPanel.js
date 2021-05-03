@@ -13,7 +13,12 @@ function ButtonPanel(props) {
   ];
 
   const renderedBtns = btns.map((btnGroup, index) => (
-    <div key={index} className="calculatorButtons">
+    <div
+      key={index}
+      className={`calculatorButtons ${
+        index === 4 && 'calculatorButtons__last'
+      }`}
+    >
       {btnGroup.map((btn, index) => (
         <Button
           key={index}
