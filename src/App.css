@@ -18,6 +18,12 @@
   border: 1px solid gray;
 }
 
+.displayContainer {
+  height: 100px;
+  background: #868694;
+  text-align: right;
+}
+
 .calculatorButtons {
   height: 100px;
   display: grid;
