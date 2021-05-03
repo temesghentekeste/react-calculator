@@ -1,10 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Button({ name, clickHandler }) {
+function Button({ name, clickHandler, isLast }) {
   return (
-    <div>
-      <button type="button" onClick={() => clickHandler(name)}>
+    <div
+      className={`calculatorButtonContainer ${
+        isLast && 'calculatorButtonContainer_last'
+      }`}
+    >
+      <button
+        type="button"
+        onClick={() => clickHandler(name)}
+        className="calculatorButtonContainer__button"
+      >
         {name}
       </button>
     </div>
@@ -12,6 +20,7 @@ function Button({ name, clickHandler }) {
 }
 
 Button.propTypes = {
+  isLast: PropTypes.bool.isRequired,
   name: PropTypes.string.isRequired,
   clickHandler: PropTypes.func.isRequired,
 };
