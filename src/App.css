@@ -24,6 +24,11 @@
   text-align: right;
 }
 
+.displayContainer__result {
+  margin-right: 1rem;
+  color: #fff;
+}
+
 .calculatorButtons {
   height: 100px;
   display: grid;
