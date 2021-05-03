@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unused-state */
-/* eslint-disable no-unused-vars */
+/* eslint-disable import/no-named-as-default-member */
+/* eslint-disable import/no-named-as-default */
 import { useState } from 'react';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
