@@ -52,6 +52,6 @@ Feel free to check the [issues page](https://github.com/temesghentekeste/react-c
 Give a ⭐️ if you like this project!
 
 ## :clap: Acknowledgements
-- < href="https://www.microverse.org/" target="_blank">microverse.org</>
+- <a href="https://www.microverse.org/" target="_blank">microverse.org</a>
 - <a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a>
 </a>
