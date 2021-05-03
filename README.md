@@ -6,6 +6,11 @@ A basic calculator developed using React.
 
 **Click [here](https://react-calculator-temesghen.herokuapp.com/) in order to see a Live Demo of this project.**
 
+
+### Search Page
+
+![screenshot](./public/screenshot.png)
+
 ## Project Specification
 
   - [ ] Use create-react-app to initialize a new React app
