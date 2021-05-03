@@ -7,6 +7,23 @@
   pointer-events: none;
 }
 
+.calculatorContainer {
+  width: 800px;
+  height: 500px;
+  max-width: 820px;
+  margin: auto;
+  margin-top: 2rem;
+  display: grid;
+  align-items: center;
+  border: 1px solid gray;
+}
+
+.calculatorButtons {
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

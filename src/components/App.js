@@ -20,10 +20,10 @@ const App = () => {
 
   const { currentDisplay } = calculatorData;
   return (
-    <>
+    <div className="calculatorContainer">
       <Display result={currentDisplay} />
       <ButtonPanel clickHandler={handleClick} />
-    </>
+    </div>
   );
 };
 
