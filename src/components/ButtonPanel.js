@@ -13,9 +13,19 @@ function ButtonPanel(props) {
   ];
 
   const renderedBtns = btns.map((btnGroup, index) => (
-    <div key={index}>
-      { btnGroup.map((btn, index) => (
-        <Button key={index} {...props} name={btn} />
+    <div
+      key={index}
+      className={`calculatorButtons ${
+        index === 4 && 'calculatorButtons__last'
+      }`}
+    >
+      {btnGroup.map((btn, index) => (
+        <Button
+          key={index}
+          {...props}
+          name={btn}
+          isLast={index === btnGroup.length - 1}
+        />
       ))}
     </div>
   ));
