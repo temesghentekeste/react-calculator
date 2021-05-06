@@ -1,8 +1,6 @@
-import Calculator from './Calculator';
-
 const App = () => (
   <div>
-    <Calculator />
+    <h1>Home page</h1>
   </div>
 );
 
