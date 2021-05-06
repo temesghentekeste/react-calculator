@@ -16,7 +16,9 @@ A basic calculator developed using React and React Router. It contains three pag
   - [ ] Use create-react-app to initialize a new React app
   - [ ] Add prop-types using npm for typechecking props.
   - [ ] Add big.js using npm.
-  - [ ] Run the application with npm start and make sure that everything works correctly.
+  - [ ] Refactor app using Hooks.
+  - [ ] Style the calculator.
+  - [ ] Use React router to set up three pages: Home, Calculator & Quote of the day
   - [ ] Use create-react-app-buildpack to deploy the app to Heroku
 
 ## Built With
@@ -24,7 +26,9 @@ A basic calculator developed using React and React Router. It contains three pag
  - [ ] Node.js
  - [ ] React
  - [ ] React-DOM
+ - [ ] React Router
  - [ ] React-Create-App
+ - [ ] Heroku
  - [ ] npm
  - [ ] CSS
  - [ ] ES6
