@@ -1,5 +1,5 @@
 body {
-  width: 1120px;
+  width: 90%;
   margin: 0 auto;
   font-family:
     -apple-system,
@@ -41,6 +41,7 @@ nav {
 }
 
 nav ul {
+  margin-top: -2rem;
   display: flex;
   justify-content: start;
   list-style: none;
@@ -67,6 +68,16 @@ nav li a {
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.quoteText {
+  max-width: 800px;
+  margin: auto;
+}
+
+.calculatorPage {
+  margin-top: -2rem;
+  display: flex;
 }
 
 .calculatorContainer {
