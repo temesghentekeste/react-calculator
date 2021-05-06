@@ -1,5 +1,6 @@
 body {
-  margin: 0;
+  width: 1120px;
+  margin: 0 auto;
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -16,6 +17,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #333;
+}
+
 code {
   font-family:
     source-code-pro,
@@ -24,6 +32,32 @@ code {
     Consolas,
     'Courier New',
     monospace;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: start;
+  list-style: none;
+}
+
+nav h1 {
+  font-size: 3rem;
+}
+
+nav ul li {
+  margin-right: 1rem;
+}
+
+nav li a {
+  display: block;
+  padding: 0.6rem 0.6rem;
+  transition: background 0.5s ease;
 }
 
 .App {
@@ -117,4 +151,3 @@ code {
     transform: rotate(360deg);
   }
 }
-
