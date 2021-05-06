@@ -1,6 +1,6 @@
 # React Calculator
 
-A basic calculator developed using React.
+A basic calculator developed using React and React Router. It contains three pages each of which is maintained and monitored by React Router DOM.
 
 ## 🔴 Live Demo
 
