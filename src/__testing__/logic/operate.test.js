@@ -32,12 +32,18 @@ describe('calculate operations', () => {
   });
 });
 
- test('should perform division correctly', () => {
-   const sum = operate(5, 10, '÷');
-   expect(sum).toBe('0.5');
- });
+test('should perform division correctly', () => {
+  const sum = operate(5, 10, '÷');
+  expect(sum).toBe('0.5');
+});
 
- test('should not perform division incorrectly', () => {
-   const sum = operate(5, 100, '÷');
-   expect(sum).not.toBe('15');
- });
+test('should not perform division incorrectly', () => {
+  const sum = operate(5, 100, '÷');
+  expect(sum).not.toBe('15');
+});
+
+test('should perform percentage correctly', () => {
+  const sum = operate(20, 10, '%');
+  expect(sum).toBe('2');
+});
+
