@@ -113,7 +113,7 @@ describe('Operations from calculate.js file', () => {
     const result = calculate(calculatorData, '%');
 
     expect(result).toStrictEqual({
-      calculated: false,
+      calculated: true,
       currentDisplay: '0.07',
       next: null,
       operation: null,
