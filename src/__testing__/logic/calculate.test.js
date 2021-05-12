@@ -97,7 +97,27 @@ describe('Operations from calculate.js file', () => {
       currentDisplay: '0',
       next: null,
       operation: null,
-      total: null
+      total: null,
+    });
+  });
+
+  test('should perform correct percentage operation on % btn click', () => {
+    const calculatorData = {
+      calculated: false,
+      currentDisplay: '7',
+      next: null,
+      operation: null,
+      total: '7',
+    };
+
+    const result = calculate(calculatorData, '%');
+
+    expect(result).toStrictEqual({
+      calculated: false,
+      currentDisplay: '0.07',
+      next: null,
+      operation: null,
+      total: 0.07
     });
   });
 });
