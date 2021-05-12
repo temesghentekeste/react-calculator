@@ -117,7 +117,7 @@ describe('Operations from calculate.js file', () => {
       currentDisplay: '0.07',
       next: null,
       operation: null,
-      total: 0.07
+      total: 0.07,
     });
   });
 });

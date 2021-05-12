@@ -61,6 +61,7 @@ const calculate = (calculatorData, btnName) => {
       if (total) {
         newCalculatorData.total /= 100;
         newCalculatorData.currentDisplay = newCalculatorData.total.toString();
+        newCalculatorData.calculated = true;
       }
       break;
 
