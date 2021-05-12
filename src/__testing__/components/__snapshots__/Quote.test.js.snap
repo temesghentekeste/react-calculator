@@ -4,6 +4,7 @@ exports[`renders the Quote component 1`] = `
 <div>
   <p
     className="quoteText"
+    data-testid="quote"
   >
     Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding. –William Paul Thurston
   </p>
