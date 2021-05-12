@@ -1,11 +1,10 @@
-import operate from '../../logic/operate'
+import operate from '../../logic/operate';
 
 describe('calculate operations', () => {
   test('should perform addition correctly', () => {
-    
-    const sum = operate(5, 10, '+')
-    expect(sum).toBe('15')
-  })
+    const sum = operate(5, 10, '+');
+    expect(sum).toBe('15');
+  });
 
   test('should not perform addition incorrectly', () => {
     const sum = operate(5, 100, '+');
@@ -22,14 +21,23 @@ describe('calculate operations', () => {
     expect(sum).not.toBe('15');
   });
 
-   test('should perform multiplication correctly', () => {
-     const sum = operate(5, 10, 'X');
-     expect(sum).toBe('50');
-   });
+  test('should perform multiplication correctly', () => {
+    const sum = operate(5, 10, 'X');
+    expect(sum).toBe('50');
+  });
 
-   test('should not perform multiplication incorrectly', () => {
-     const sum = operate(5, 100, 'X');
-     expect(sum).not.toBe('15');
-   });
-  
-})
+  test('should not perform multiplication incorrectly', () => {
+    const sum = operate(5, 100, 'X');
+    expect(sum).not.toBe('15');
+  });
+});
+
+ test('should perform division correctly', () => {
+   const sum = operate(5, 10, '÷');
+   expect(sum).toBe('0.5');
+ });
+
+ test('should not perform division incorrectly', () => {
+   const sum = operate(5, 100, '÷');
+   expect(sum).not.toBe('15');
+ });
