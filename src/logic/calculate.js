@@ -9,6 +9,8 @@ const resetCalculatorData = (data) => {
 };
 
 const calculate = (calculatorData, btnName) => {
+  console.log('data:', calculatorData);
+
   let newCalculatorData = { ...calculatorData };
   const digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   const operators = ['+', '-', 'X', '÷', '%'];
@@ -93,7 +95,9 @@ const calculate = (calculatorData, btnName) => {
 
     case '.':
       if (!calculatorData.operation && calculatorData.total && !calculated) {
-        newCalculatorData.total = newCalculatorData.total.toString().includes('.')
+        newCalculatorData.total = newCalculatorData.total
+          .toString()
+          .includes('.')
           ? `${newCalculatorData.total}`
           : `${newCalculatorData.total}.`;
         newCalculatorData.currentDisplay = `${newCalculatorData.total}`;
@@ -129,6 +133,7 @@ const calculate = (calculatorData, btnName) => {
       break;
   }
 
+  console.log('result:', newCalculatorData);
   return newCalculatorData;
 };
 
