@@ -46,4 +46,3 @@ test('should perform percentage correctly', () => {
   const sum = operate(20, 10, '%');
   expect(sum).toBe('2');
 });
-
