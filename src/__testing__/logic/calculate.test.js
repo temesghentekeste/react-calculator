@@ -60,4 +60,24 @@ describe('Operations from calculate.js file', () => {
       total: 48,
     });
   });
+
+  test('should perform correct division operation on = btn click', () => {
+    const calculatorData = {
+      calculated: false,
+      currentDisplay: '3',
+      next: '4',
+      operation: '÷',
+      total: '12',
+    };
+
+    const result = calculate(calculatorData, '=');
+
+    expect(result).toStrictEqual({
+      calculated: true,
+      currentDisplay: '3',
+      next: '0',
+      operation: null,
+      total: 3,
+    });
+  });
 });
