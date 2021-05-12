@@ -69,6 +69,7 @@ const calculate = (calculatorData, btnName) => {
       if (newCalculatorData.total && !newCalculatorData.operation) {
         newCalculatorData.total *= -1;
         newCalculatorData.currentDisplay = newCalculatorData.total.toString();
+        newCalculatorData.calculated = true;
       }
 
       if (newCalculatorData.total && newCalculatorData.operation) {

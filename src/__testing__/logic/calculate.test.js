@@ -120,4 +120,24 @@ describe('Operations from calculate.js file', () => {
       total: 0.07,
     });
   });
+
+  test('should perform correct  operation on +/- btn click', () => {
+    const calculatorData = {
+      calculated: false,
+      currentDisplay: '7',
+      next: null,
+      operation: null,
+      total: '7',
+    };
+
+    const result = calculate(calculatorData, '+/-');
+
+    expect(result).toStrictEqual({
+      calculated: true,
+      currentDisplay: '-7',
+      next: null,
+      operation: null,
+      total: -7,
+    });
+  });
 });
