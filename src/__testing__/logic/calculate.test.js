@@ -80,4 +80,24 @@ describe('Operations from calculate.js file', () => {
       total: 3,
     });
   });
+
+  test('should reset calculaor data on AC btn click', () => {
+    const calculatorData = {
+      calculated: false,
+      currentDisplay: '3',
+      next: '4',
+      operation: '',
+      total: '12',
+    };
+
+    const result = calculate(calculatorData, 'AC');
+
+    expect(result).toStrictEqual({
+      calculated: false,
+      currentDisplay: '0',
+      next: null,
+      operation: null,
+      total: null
+    });
+  });
 });
