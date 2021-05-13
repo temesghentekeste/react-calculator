@@ -17,3 +17,9 @@ it('renders the Display component', () => {
 
   expect(component).toMatchSnapshot();
 });
+
+it('renders the Display component with a result', () => {
+  const component = renderer.create(<Display result='100' />).toJSON();
+
+  expect(component).toMatchSnapshot();
+});

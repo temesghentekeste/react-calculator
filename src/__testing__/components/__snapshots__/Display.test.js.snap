@@ -12,3 +12,16 @@ exports[`renders the Display component 1`] = `
   </h1>
 </div>
 `;
+
+exports[`renders the Display component with a result 1`] = `
+<div
+  className="displayContainer"
+>
+  <h1
+    className="displayContainer__result"
+    data-testid="result"
+  >
+    100
+  </h1>
+</div>
+`;
