@@ -14,7 +14,7 @@ beforeEach(() => {
       <Navbar />
     </Router>
   );
-  
+
   getByTestId = component.getByTestId;
 });
 
@@ -33,4 +33,9 @@ it('renders the Navbar component', () => {
 it('should contain correct heading', () => {
   const headingEl = getByTestId('heading');
   expect(component.getByText(headingEl.textContent)).toBeInTheDocument();
+});
+
+it('should contain correct Home link', () => {
+  const homeEl = getByTestId('home');
+  expect(component.getByText(homeEl.textContent)).toBeInTheDocument();
 });

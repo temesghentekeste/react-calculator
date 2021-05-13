@@ -8,7 +8,9 @@ exports[`renders the Navbar component 1`] = `
     Math Magicians
   </h1>
   <ul>
-    <li>
+    <li
+      data-testid="home"
+    >
       <a
         href="/"
         onClick={[Function]}
@@ -16,7 +18,9 @@ exports[`renders the Navbar component 1`] = `
         Home
       </a>
     </li>
-    <li>
+    <li
+      data-testid="calculator"
+    >
       <a
         href="/calculator"
         onClick={[Function]}
@@ -24,7 +28,9 @@ exports[`renders the Navbar component 1`] = `
         Calculator
       </a>
     </li>
-    <li>
+    <li
+      data-testid="quote"
+    >
       <a
         href="/quote"
         onClick={[Function]}
