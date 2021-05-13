@@ -39,3 +39,9 @@ it('should contain correct Home link', () => {
   const homeEl = getByTestId('home');
   expect(component.getByText(homeEl.textContent)).toBeInTheDocument();
 });
+
+it('should contain correct Calculator link', () => {
+  const calculatorEl = getByTestId('calculator');
+  expect(component.getByText(calculatorEl.textContent)).toBeInTheDocument();
+});
+
