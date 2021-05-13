@@ -13,13 +13,14 @@ beforeEach(() => {
 });
 
 it('renders the Display component', () => {
-  const component = renderer.create(<Display />).toJSON();
+  component = renderer.create(<Display result="100" />).toJSON();
 
   expect(component).toMatchSnapshot();
 });
 
 it('renders the Display component with a result', () => {
-  const component = renderer.create(<Display result='100' />).toJSON();
+  const { getByText } = render(<Display result="100" />);
 
-  expect(component).toMatchSnapshot();
+  const displayResult = getByText(/100/i);
+  expect(displayResult).toBeInTheDocument();
 });
