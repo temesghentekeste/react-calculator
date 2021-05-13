@@ -2,7 +2,9 @@
 
 exports[`renders the Navbar component 1`] = `
 <nav>
-  <h1>
+  <h1
+    data-testid="heading"
+  >
     Math Magicians
   </h1>
   <ul>

@@ -6,9 +6,20 @@ import Navbar from '../../components/Navbar';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 let getByTestId;
+let component;
+
+beforeEach(() => {
+  component = render(
+    <Router>
+      <Navbar />
+    </Router>
+  );
+  
+  getByTestId = component.getByTestId;
+});
 
 it('renders the Navbar component', () => {
-  const component = renderer
+  component = renderer
     .create(
       <Router>
         <Navbar />
@@ -17,4 +28,9 @@ it('renders the Navbar component', () => {
     .toJSON();
 
   expect(component).toMatchSnapshot();
+});
+
+it('should contain correct heading', () => {
+  const headingEl = getByTestId('heading');
+  expect(component.getByText(headingEl.textContent)).toBeInTheDocument();
 });
