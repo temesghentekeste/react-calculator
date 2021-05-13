@@ -45,3 +45,7 @@ it('should contain correct Calculator link', () => {
   expect(component.getByText(calculatorEl.textContent)).toBeInTheDocument();
 });
 
+it('should contain correct Quote link', () => {
+  const quoteEL = getByTestId('quote');
+  expect(component.getByText(quoteEL.textContent)).toBeInTheDocument();
+});
