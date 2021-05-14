@@ -12,6 +12,7 @@ function Button({ name, clickHandler, isLast }) {
         type="button"
         onClick={() => clickHandler(name)}
         className="calculatorButtonContainer__button"
+        data-testid={name}
       >
         {name}
       </button>

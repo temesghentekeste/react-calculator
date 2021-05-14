@@ -59,6 +59,7 @@ const calculate = (calculatorData, btnName) => {
       if (total) {
         newCalculatorData.total /= 100;
         newCalculatorData.currentDisplay = newCalculatorData.total.toString();
+        newCalculatorData.calculated = true;
       }
       break;
 
@@ -66,6 +67,7 @@ const calculate = (calculatorData, btnName) => {
       if (newCalculatorData.total && !newCalculatorData.operation) {
         newCalculatorData.total *= -1;
         newCalculatorData.currentDisplay = newCalculatorData.total.toString();
+        newCalculatorData.calculated = true;
       }
 
       if (newCalculatorData.total && newCalculatorData.operation) {
@@ -93,7 +95,9 @@ const calculate = (calculatorData, btnName) => {
 
     case '.':
       if (!calculatorData.operation && calculatorData.total && !calculated) {
-        newCalculatorData.total = newCalculatorData.total.toString().includes('.')
+        newCalculatorData.total = newCalculatorData.total
+          .toString()
+          .includes('.')
           ? `${newCalculatorData.total}`
           : `${newCalculatorData.total}.`;
         newCalculatorData.currentDisplay = `${newCalculatorData.total}`;

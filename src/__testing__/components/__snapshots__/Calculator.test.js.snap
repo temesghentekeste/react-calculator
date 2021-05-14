@@ -1,0 +1,277 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Calculator component 1`] = `
+<div
+  className="calculatorPage"
+>
+  <h1
+    data-testid="heading"
+  >
+    Let’s do some math!
+  </h1>
+  <div
+    className="calculatorContainer"
+  >
+    <div
+      className="displayContainer"
+    >
+      <h1
+        className="displayContainer__result"
+        data-testid="mainResult"
+      >
+        0
+      </h1>
+    </div>
+    <div>
+      <div
+        className="calculatorButtons false"
+      >
+        <div
+          className="calculatorButtonContainer false"
+        >
+          <button
+            className="calculatorButtonContainer__button"
+            data-testid="AC"
+            onClick={[Function]}
+            type="button"
+          >
+            AC
+          </button>
+        </div>
+        <div
+          className="calculatorButtonContainer false"
+        >
+          <button
+            className="calculatorButtonContainer__button"
+            data-testid="+/-"
+            onClick={[Function]}
+            type="button"
+          >
+            +/-
+          </button>
+        </div>
+        <div
+          className="calculatorButtonContainer false"
+        >
+          <button
+            className="calculatorButtonContainer__button"
+            data-testid="%"
+            onClick={[Function]}
+            type="button"
+          >
+            %
+          </button>
+        </div>
+        <div
+          className="calculatorButtonContainer calculatorButtonContainer_last"
+        >
+          <button
+            className="calculatorButtonContainer__button"
+            data-testid="÷"
+            onClick={[Function]}
+            type="button"
+          >
+            ÷
+          </button>
+        </div>
+      </div>
+      <div
+        className="calculatorButtons false"
+      >
+        <div
+          className="calculatorButtonContainer false"
+        >
+          <button
+            className="calculatorButtonContainer__button"
+            data-testid="7"
+            onClick={[Function]}
+            type="button"
+          >
+            7
+          </button>
+        </div>
+        <div
+          className="calculatorButtonContainer false"
+        >
+          <button
+            className="calculatorButtonContainer__button"
+            data-testid="8"
+            onClick={[Function]}
+            type="button"
+          >
+            8
+          </button>
+        </div>
+        <div
+          className="calculatorButtonContainer false"
+        >
+          <button
+            className="calculatorButtonContainer__button"
+            data-testid="9"
+            onClick={[Function]}
+            type="button"
+          >
+            9
+          </button>
+        </div>
+        <div
+          className="calculatorButtonContainer calculatorButtonContainer_last"
+        >
+          <button
+            className="calculatorButtonContainer__button"
+            data-testid="X"
+            onClick={[Function]}
+            type="button"
+          >
+            X
+          </button>
+        </div>
+      </div>
+      <div
+        className="calculatorButtons false"
+      >
+        <div
+          className="calculatorButtonContainer false"
+        >
+          <button
+            className="calculatorButtonContainer__button"
+            data-testid="4"
+            onClick={[Function]}
+            type="button"
+          >
+            4
+          </button>
+        </div>
+        <div
+          className="calculatorButtonContainer false"
+        >
+          <button
+            className="calculatorButtonContainer__button"
+            data-testid="5"
+            onClick={[Function]}
+            type="button"
+          >
+            5
+          </button>
+        </div>
+        <div
+          className="calculatorButtonContainer false"
+        >
+          <button
+            className="calculatorButtonContainer__button"
+            data-testid="6"
+            onClick={[Function]}
+            type="button"
+          >
+            6
+          </button>
+        </div>
+        <div
+          className="calculatorButtonContainer calculatorButtonContainer_last"
+        >
+          <button
+            className="calculatorButtonContainer__button"
+            data-testid="-"
+            onClick={[Function]}
+            type="button"
+          >
+            -
+          </button>
+        </div>
+      </div>
+      <div
+        className="calculatorButtons false"
+      >
+        <div
+          className="calculatorButtonContainer false"
+        >
+          <button
+            className="calculatorButtonContainer__button"
+            data-testid="1"
+            onClick={[Function]}
+            type="button"
+          >
+            1
+          </button>
+        </div>
+        <div
+          className="calculatorButtonContainer false"
+        >
+          <button
+            className="calculatorButtonContainer__button"
+            data-testid="2"
+            onClick={[Function]}
+            type="button"
+          >
+            2
+          </button>
+        </div>
+        <div
+          className="calculatorButtonContainer false"
+        >
+          <button
+            className="calculatorButtonContainer__button"
+            data-testid="3"
+            onClick={[Function]}
+            type="button"
+          >
+            3
+          </button>
+        </div>
+        <div
+          className="calculatorButtonContainer calculatorButtonContainer_last"
+        >
+          <button
+            className="calculatorButtonContainer__button"
+            data-testid="+"
+            onClick={[Function]}
+            type="button"
+          >
+            +
+          </button>
+        </div>
+      </div>
+      <div
+        className="calculatorButtons calculatorButtons__last"
+      >
+        <div
+          className="calculatorButtonContainer false"
+        >
+          <button
+            className="calculatorButtonContainer__button"
+            data-testid="0"
+            onClick={[Function]}
+            type="button"
+          >
+            0
+          </button>
+        </div>
+        <div
+          className="calculatorButtonContainer false"
+        >
+          <button
+            className="calculatorButtonContainer__button"
+            data-testid="."
+            onClick={[Function]}
+            type="button"
+          >
+            .
+          </button>
+        </div>
+        <div
+          className="calculatorButtonContainer calculatorButtonContainer_last"
+        >
+          <button
+            className="calculatorButtonContainer__button"
+            data-testid="="
+            onClick={[Function]}
+            type="button"
+          >
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
