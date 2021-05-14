@@ -25,6 +25,7 @@ A basic calculator developed using React and React Router. It contains three pag
 
  - [ ] Node.js
  - [ ] React
+ - [ ] React Testing Library
  - [ ] React-DOM
  - [ ] React Router
  - [ ] React-Create-App
