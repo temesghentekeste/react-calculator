@@ -23,3 +23,11 @@ it('renders the Button component', () => {
 
   expect(component).toMatchSnapshot();
 });
+
+it('renders the Button component with correct text content', () => {
+  const { getByTestId } = render(
+    <Button name="-" clickHandler={handleClick} isLast={true} />
+  );
+
+  expect(getByTestId('-')).toHaveTextContent('-');
+});
