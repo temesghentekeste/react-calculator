@@ -47,3 +47,13 @@ it('renders the Button component with correct name', () => {
 
   expect(getByTestId('AC')).toHaveTextContent('AC');
 });
+
+it('renders the Button component with correct role; i.e, button', () => {
+  const { getAllByRole } = render(
+    <Button name="AC" clickHandler={handleClick} isLast={true} />
+  );
+
+  const btnRoles = getAllByRole('button');
+
+  expect(btnRoles[0]).toBeInTheDocument();
+});

@@ -14,18 +14,3 @@ exports[`renders the Button component 1`] = `
   </button>
 </div>
 `;
-
-exports[`renders the Button component 2`] = `
-<div
-  className="calculatorButtonContainer calculatorButtonContainer_last"
->
-  <button
-    className="calculatorButtonContainer__button"
-    data-testid="+"
-    onClick={[Function]}
-    type="button"
-  >
-    +
-  </button>
-</div>
-`;
