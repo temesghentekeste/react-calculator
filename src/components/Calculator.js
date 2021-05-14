@@ -20,7 +20,7 @@ const Calculator = () => {
   const { currentDisplay } = calculatorData;
   return (
     <div className="calculatorPage">
-      <h1>Let’s do some math!</h1>
+      <h1 data-testid="heading">Let’s do some math!</h1>
       <div className="calculatorContainer">
         <Display result={currentDisplay} />
         <ButtonPanel clickHandler={handleClick} />

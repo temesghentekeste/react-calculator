@@ -7,10 +7,21 @@ import ButtonPanel from '../../components/ButtonPanel';
 import Display from '../../components/Display';
 import calculate from '../../logic/calculate';
 
+let getByTestId;
+
+beforeEach(() => {
+  const component = render(<Calculator />);
+  getByTestId = component.getByTestId;
+});
+
 it('renders the Calculator component', () => {
-  const component = renderer
-    .create(<Calculator/>)
-    .toJSON();
+  const component = renderer.create(<Calculator />).toJSON();
 
   expect(component).toMatchSnapshot();
+});
+
+it('renders the Calculator component with correct heading', () => {
+  const headingEl = getByTestId('heading');
+
+  expect(headingEl).toBeTruthy();
 });
