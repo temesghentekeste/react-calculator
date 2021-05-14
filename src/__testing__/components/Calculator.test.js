@@ -98,3 +98,15 @@ test('should give correct percentage operation', () => {
   fireEvent.click(percentageBtn);
   expect(resultHeading.textContent).toBe('0.09');
 });
+
+test('should give correct percentage +/-', () => {
+  const plusMinusBtn = getByTestId('+/-');
+  const numberNineBtn = getByTestId('9');
+  const resultHeading = getByTestId('mainResult');
+
+  expect(plusMinusBtn.textContent).toBe('+/-');
+
+  fireEvent.click(numberNineBtn);
+  fireEvent.click(plusMinusBtn);
+  expect(resultHeading.textContent).toBe('-9');
+});
