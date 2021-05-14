@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Button component 1`] = `
+<div
+  className="calculatorButtonContainer calculatorButtonContainer_last"
+>
+  <button
+    className="calculatorButtonContainer__button"
+    onClick={[Function]}
+    type="button"
+  >
+    +
+  </button>
+</div>
+`;
+
+exports[`renders the Display component 1`] = `
+<div
+  className="calculatorButtonContainer calculatorButtonContainer_last"
+>
+  <button
+    className="calculatorButtonContainer__button"
+    onClick={[Function]}
+    type="button"
+  >
+    +
+  </button>
+</div>
+`;
