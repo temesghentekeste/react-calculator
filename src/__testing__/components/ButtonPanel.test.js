@@ -7,15 +7,17 @@ import Button from '../../components/Button';
 
 const handleClick = () => 'Clicked';
 
-it('renders the ButtonPanel component', () => {
-  render(<ButtonPanel clickHandler={handleClick}>
-    <Button name="AC" clickHandler={handleClick} isLast={true}/>
-  </ButtonPanel>);
+it('renders the ButtonPanel component with child Button element', () => {
+  render(
+    <ButtonPanel clickHandler={handleClick}>
+      <Button name="AC" clickHandler={handleClick} isLast={true} />
+    </ButtonPanel>
+  );
 
   expect(screen.queryByText('AC')).toBeTruthy();
 });
 
-it('renders the ButtonPanel component with child Button element', () => {
+it('renders the ButtonPanel component', () => {
   const component = renderer
     .create(<ButtonPanel clickHandler={handleClick}></ButtonPanel>)
     .toJSON();
