@@ -70,3 +70,19 @@ test('should give correct multiply operation', () => {
   fireEvent.click(equalsBtn);
   expect(resultHeading.textContent).toBe('18');
 });
+
+test('should give correct division operation', () => {
+  const divideBtn = getByTestId('÷');
+  const equalsBtn = getByTestId('=');
+  const numberNineBtn = getByTestId('9');
+  const numberTwobtn = getByTestId('2');
+  const resultHeading = getByTestId('mainResult');
+
+  expect(divideBtn.textContent).toBe('÷');
+
+  fireEvent.click(numberNineBtn);
+  fireEvent.click(divideBtn);
+  fireEvent.click(numberTwobtn);
+  fireEvent.click(equalsBtn);
+  expect(resultHeading.textContent).toBe('4.5');
+});
