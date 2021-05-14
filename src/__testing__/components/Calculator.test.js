@@ -38,3 +38,19 @@ test('should give correct subtraction operation', () => {
   fireEvent.click(equalsBtn);
   expect(resultHeading.textContent).toBe('-1');
 });
+
+test('should give correct addition operation', () => {
+  const additionBtn = getByTestId('+');
+  const equalsBtn = getByTestId('=');
+  const numberOnebtn = getByTestId('1');
+  const numberTwobtn = getByTestId('2');
+  const resultHeading = getByTestId('mainResult');
+
+  expect(additionBtn.textContent).toBe('+');
+
+  fireEvent.click(numberOnebtn);
+  fireEvent.click(additionBtn);
+  fireEvent.click(numberTwobtn);
+  fireEvent.click(equalsBtn);
+  expect(resultHeading.textContent).toBe('3');
+});
