@@ -18,7 +18,6 @@ it('renders the Quote component', () => {
 });
 
 test('should render Quote component with correct text', () => {
-  // First we need to render our component using the render function
   const headerEl = getByTestId('quote');
 
   expect(headerEl.textContent).toBe('Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding. –William Paul Thurston');

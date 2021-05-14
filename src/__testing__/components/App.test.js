@@ -18,7 +18,6 @@ it('renders the App component', () => {
 });
 
 test('should render App component with correct heading text', () => {
-  // First we need to render our component using the render function
   const headerEl = getByTestId('mainHeading');
 
   expect(headerEl.textContent).toBe('Welcome to our page!');
