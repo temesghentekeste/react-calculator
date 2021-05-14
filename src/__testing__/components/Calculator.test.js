@@ -54,3 +54,19 @@ test('should give correct addition operation', () => {
   fireEvent.click(equalsBtn);
   expect(resultHeading.textContent).toBe('3');
 });
+
+test('should give correct multiply operation', () => {
+  const multiplyBtn = getByTestId('X');
+  const equalsBtn = getByTestId('=');
+  const numberNineBtn = getByTestId('9');
+  const numberTwobtn = getByTestId('2');
+  const resultHeading = getByTestId('mainResult');
+
+  expect(multiplyBtn.textContent).toBe('X');
+
+  fireEvent.click(numberNineBtn);
+  fireEvent.click(multiplyBtn);
+  fireEvent.click(numberTwobtn);
+  fireEvent.click(equalsBtn);
+  expect(resultHeading.textContent).toBe('18');
+});
