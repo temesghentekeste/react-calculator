@@ -31,3 +31,11 @@ it('renders the Button component with correct text content', () => {
 
   expect(getByTestId('-')).toHaveTextContent('-');
 });
+
+it('renders the Button component with correct text content', () => {
+  const { getByTestId } = render(
+    <Button name="-" clickHandler={handleClick} isLast={true} />
+  );
+
+  expect(getByTestId('-')).not.toHaveTextContent('AC');
+});
