@@ -110,3 +110,16 @@ test('should give correct percentage +/-', () => {
   fireEvent.click(plusMinusBtn);
   expect(resultHeading.textContent).toBe('-9');
 });
+
+test('should give correct appended number', () => {
+  const numberOneBtn = getByTestId('1');
+  const numberNineBtn = getByTestId('9');
+  const numberZeroBtn = getByTestId('0');
+  const resultHeading = getByTestId('mainResult');
+
+  fireEvent.click(numberNineBtn);
+  fireEvent.click(numberZeroBtn);
+  fireEvent.click(numberOneBtn);
+  expect(resultHeading.textContent).not.toBe('109');
+  expect(resultHeading.textContent).toBe('901');
+});
