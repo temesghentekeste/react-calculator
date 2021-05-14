@@ -86,3 +86,15 @@ test('should give correct division operation', () => {
   fireEvent.click(equalsBtn);
   expect(resultHeading.textContent).toBe('4.5');
 });
+
+test('should give correct percentage operation', () => {
+  const percentageBtn = getByTestId('%');
+  const numberNineBtn = getByTestId('9');
+  const resultHeading = getByTestId('mainResult');
+
+  expect(percentageBtn.textContent).toBe('%');
+
+  fireEvent.click(numberNineBtn);
+  fireEvent.click(percentageBtn);
+  expect(resultHeading.textContent).toBe('0.09');
+});
